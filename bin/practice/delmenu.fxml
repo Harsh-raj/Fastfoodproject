@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" styleClass="root" stylesheets="@gui.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practice.DelMenu">
+   <children>
+      <StackPane fx:id="stackPane" prefHeight="300.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="304.0" prefWidth="500.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="500.0" text="Delete Item from Menu">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="info" prefHeight="20.0" prefWidth="203.0" text="Choose an Item to remove...">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font></Label>
+                  <HBox alignment="CENTER" prefHeight="220.0" prefWidth="500.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="204.0" prefWidth="244.0" spacing="30.0">
+                           <children>
+                              <ComboBox fx:id="categorycbk" editable="true" onAction="#cbksel" prefHeight="25.0" prefWidth="223.0" promptText="Choose Category" stylesheets="@gui.css" />
+                              <TextField fx:id="itemName" prefHeight="25.0" prefWidth="234.0" promptText="Item Name">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#delMenu" prefHeight="32.0" prefWidth="108.0" text="delete Item">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#cancelsetting" prefHeight="32.0" prefWidth="108.0" text="Cancel">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <ListView fx:id="itemlist" prefHeight="231.0" prefWidth="235.0">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </ListView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

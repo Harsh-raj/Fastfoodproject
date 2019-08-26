@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" styleClass="root" stylesheets="@gui.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practice.VerifyCust">
+   <children>
+      <StackPane fx:id="stackPane" layoutX="64.0" prefHeight="300.0" prefWidth="363.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="301.0" prefWidth="344.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="36.0" prefWidth="490.0" text="Customer Verification">
+                     <font>
+                        <Font name="Arial Black" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mobileno" prefHeight="25.0" prefWidth="160.0" promptText="Enter Cutomer Mobile No." />
+                  <Label fx:id="label" prefHeight="17.0" prefWidth="499.0" text="Enter all field details">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="Fname" prefHeight="25.0" prefWidth="160.0" promptText="Enter Customer First Name" />
+                  <TextField fx:id="Lname" prefHeight="25.0" prefWidth="160.0" promptText="Enter Cutomer Last Name" />
+                  <HBox alignment="CENTER" prefHeight="24.0" prefWidth="490.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#back" text="Back">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#verifyCust" text="Verify">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#verifynewCust" text="Add new Customer">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+#OnClick{
+	-fx-font-size: 30px;
+	-fx-background-color: rgba(255, 255,255 ,.80);
+	-fx-text-fill: blue;
+	-fx-padding:6 6 6 6;
+	-fx-border-radius: 8;
+	-fx-font-weight: bold;	
+}
+#no{
+	-fx-font-size: 14px;
+	-fx-background-color: #cd5c5c;
+	-fx-text-fill: blue;
+	-fx-padding:6 6 6 6; 
+	-fx-border-radius: 8;
+	-fx-font-weight: bold;
+}
+.root{
+	-fx-background-color: #c0c0c0;
+}
+.bodybg{
+     -fx-background-image: url('image.jpg');
+     -fx-background-size: 100% 100%;    
+}

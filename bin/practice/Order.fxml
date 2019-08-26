@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@gui.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practice.TakeOrder">
+   <children>
+      <StackPane fx:id="stackPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="342.0" prefWidth="435.0" spacing="30.0">
+               <children>
+                  <Label fx:id="MobileNo" alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="146.0" text="Order">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="308.0" prefWidth="600.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="285.0" prefWidth="297.0">
+                           <children>
+                              <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" stylesheets="@gui.css">
+                                <columns>
+                                  <TableColumn fx:id="item" prefWidth="97.0" text="Item" />
+                                  <TableColumn fx:id="price" prefWidth="102.0" text="Price(Rs.)" />
+                                </columns>
+                              </TableView>
+                              <VBox alignment="CENTER" prefHeight="124.0" prefWidth="201.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#adddatas" prefHeight="34.0" prefWidth="208.0" text="Add to Bill">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="del" mnemonicParsing="false" onAction="#deldatas" prefHeight="32.0" prefWidth="208.0" text="Remove an order">
+                                       <font>
+                                          <Font name="Arial Black" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#checkout" prefHeight="32.0" prefWidth="208.0" text="Checkout">
+                                       <font>
+                                          <Font name="Arial Black" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="285.0" prefWidth="309.0" spacing="160.0">
+                           <children>
+                              <ComboBox fx:id="categorycbk" editable="true" onAction="#Categorysel" prefHeight="25.0" prefWidth="185.0" promptText="Choose Category" stylesheets="@gui.css" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                                 <children>
+                                    <Label fx:id="info" text="Enter Orders here">
+                                       <font>
+                                          <Font name="Arial Black" size="13.0" />
+                                       </font></Label>
+                                    <TextField fx:id="adddata" prefHeight="30.0" prefWidth="185.0" promptText="Enter order here..." stylesheets="@gui.css" />
+                                    <TextField fx:id="deldata" prefHeight="30.0" prefWidth="185.0" promptText="Delete an order..." />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
